@@ -154,4 +154,8 @@ Luau.lua_tointeger = function(L, i)
     return Luau.lua_tointegerx(L, i, nil)
 end
 
+Luau.lua_isnil = function(L, idx)
+    return Luau.lua_type(L, idx) == Luau.LUA_TNIL
+end
+
 return Luau

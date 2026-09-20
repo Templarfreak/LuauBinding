@@ -132,7 +132,7 @@ local ffi_load_index_func = new_cfunc(function(L)
         print("returning cached function")
         local cfunc = lib.cfuncs[symbol]
 
-        LuauAPI.lua_pushcclosure(L, cfunc, 0)
+        LuauAPI.lua_pushcclosure(L, cfunc, nil, 0)
 
         LuauAPI.lua_pushvalue(L, 2)
         LuauAPI.lua_pushvalue(L, -2)
